@@ -5,6 +5,6 @@
 
 @section('contenido')
 
-<h1 class="display-1 text-center text-danger" > VISTA1 </h1>
+<h1 class="display-1 text-center text-warning" > VISTA1 </h1>
 
-@endsection('contenido')
+
