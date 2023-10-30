@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class validadorRegistro extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
+    {
+        return [
+            'txtIsbn' => 'required|max:15',
+            'txtTitulo' => 'required|max:20',
+            'txtAutor' => 'required|max:25',
+            'txtPaginas' => 'required|max:1500',
+            'txtEditorial' => 'required|max:15',
+            'txtEmail' => 'required|max:30',
+        ];
+    }
+}
